@@ -90,6 +90,7 @@ void draw(){
   text("FPS: " + (int)frameRate,windowX - 100, 30); //FPS Text
   text("Speed: " + playerSpeed,20, 45); //Score Text
   text("Level: " + (int)playerSpeed,20, 60); //Level Text
+  text("Made by Jonas Silva, July 2015",windowX-190,windowY-10);
   // Acceleration
   if (playerSpeed < max_speed && accelerate == true){
     playerSpeed += acceleration;
