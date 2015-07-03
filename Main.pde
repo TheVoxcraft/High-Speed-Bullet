@@ -76,6 +76,13 @@ void GameOver(){
   textAlign(CENTER);
   textSize(50);
   text("Game Over!",(windowX/2),windowY/2);
+  textSize(15);
+  textAlign(LEFT);
+  fill(0,0,200);
+  text("Score: "+score,(windowX/2)-120,(windowY/2)+25);
+  text("Level: "+(int)playerSpeed,(windowX/2)-120,(windowY/2)+45);
+  fill(0,175,0);
+  text("Made by Jonas Silva, July 2015",windowX-230,windowY-10);
 }
 
 void draw(){
@@ -84,7 +91,6 @@ void draw(){
   
   drawFood(); // Calls DrawFood Method
   FoodCollision(); // Calls the food collision method
-  
   fill(0,0,0); //Sets Color Black for Text
   text("Score: "+score,20,30); //Score Text
   text("FPS: " + (int)frameRate,windowX - 100, 30); //FPS Text
@@ -92,7 +98,7 @@ void draw(){
   text("Level: " + (int)playerSpeed,20, 60); //Level Text
   text("Made by Jonas Silva, July 2015",windowX-190,windowY-10);
   // Acceleration
-  if (playerSpeed < max_speed && accelerate == true){
+  if (playerSpeed < max_speed && accelerate == true && isDead() == false){
     playerSpeed += acceleration;
   }
   
