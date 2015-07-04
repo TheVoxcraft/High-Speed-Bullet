@@ -1,6 +1,6 @@
 void keyPressed() { //Controls
 //println(keyCode);
-    if (key == CODED) {
+    if (key == CODED && isDead() == false) {
       
     if (keyCode == UP) {
       direction = "up";
