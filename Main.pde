@@ -89,14 +89,10 @@ void draw(){
   background(250,250,250); //Clears Drawn Pixels and sets bg 
   playerSize = score + 50; //Sets player size by multiplying score by 50
   
+  
   drawFood(); // Calls DrawFood Method
   FoodCollision(); // Calls the food collision method
   fill(0,0,0); //Sets Color Black for Text
-  text("Score: "+score,20,30); //Score Text
-  text("FPS: " + (int)frameRate,windowX - 100, 30); //FPS Text
-  text("Speed: " + playerSpeed,20, 45); //Score Text
-  text("Level: " + (int)playerSpeed,20, 60); //Level Text
-  text("Made by Jonas Silva, July 2015",windowX-190,windowY-10);
   // Acceleration
   if (playerSpeed < max_speed && accelerate == true && isDead() == false){
     playerSpeed += acceleration;
@@ -120,6 +116,11 @@ void draw(){
    
   drawFood();
   
+  text("Score: "+score,20,30); //Score Text
+  text("FPS: " + (int)frameRate,windowX - 100, 30); //FPS Text
+  text("Speed: " + playerSpeed,20, 45); //Score Text
+  text("Level: " + (int)playerSpeed,20, 60); //Level Text
+  text("Made by Jonas Silva, July 2015",windowX-190,windowY-10);
   
   fill(a,b,c); //Sets Random color on the player
   if (direction == "up") {
